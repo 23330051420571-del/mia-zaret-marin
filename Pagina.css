@@ -1,0 +1,195 @@
+/* ------------------------------------- */
+/* ESTILOS CSS GENERALES Y DE LAYOUT     */
+/* ------------------------------------- */
+
+:root {
+    --color-principal: #004d40; /* Verde oscuro (CBTis) */
+    --color-secundario: #4db6ac; /* Verde claro */
+    --color-fondo: #f5f5f5; /* Gris claro para el fondo */
+    --color-texto: #333;
+    --ancho-max: 1000px;
+}
+
+* {
+    /* Reseteo básico para asegurar consistencia */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+.contenedor {
+    /* Centra el contenido y establece un ancho máximo */
+    width: 90%;
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+}
+
+/* --- Header y Navegación --- */
+header {
+    background: var(--color-principal);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    background-color: var(--color-secundario);
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00796b;
+}
+
+/* --- Layout Principal: Flexbox para main y aside --- */
+.contenido-principal {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+main {
+    flex: 3; /* Área principal (noticias, formulario, acerca de) */
+}
+
+aside {
+    flex: 1; /* Barra lateral (enlaces) */
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+section, .card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-secundario);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--color-principal);
+    color: white;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* ------------------------------------- */
+/* ESTILOS ESPECÍFICOS DE FORMULARIO     */
+/* ------------------------------------- */
+
+.formulario-seccion label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario-seccion input[type="text"],
+.formulario-seccion input[type="email"],
+.formulario-seccion select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.grupo-opciones {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.grupo-opciones div {
+    margin-bottom: 5px;
+}
+
+.formulario-seccion button {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.formulario-seccion button:hover {
+    background-color: #00796b;
+}
+
+/* ------------------------------------- */
+/* ESTILOS ESPECÍFICOS DE ACERCA DE...   */
+/* ------------------------------------- */
+
+.perfil-card {
+    text-align: center;
+}
+
+.perfil-card img {
+    /* Estilo para la imagen del desarrollador (circular) */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid var(--color-secundario);
+}
+
+.perfil-card h3 {
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+.resena {
+    text-align: justify;
+    margin-top: 20px;
+    border-top: 1px dashed #ccc;
+    padding-top: 20px;
+}
+
+/* ------------------------------------- */
+/* MEDIA QUERIES (Responsividad)         */
+/* ------------------------------------- */
+
+@media (max-width: 768px) {
+    .contenido-principal {
+        /* Apila las columnas (main y aside) en pantallas pequeñas */
+        flex-direction: column;
+    }
+}

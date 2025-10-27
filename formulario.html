@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mia Zaret Marin FLores">
+    <meta name="date" content="16/10/2025">
+    <meta name="description" content="ejemplo de formulario con CSS">
+    <meta name="keywords" content="formulario,CSS, registro">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="Pagina.css">
+</head>
+<body>
+
+    <header>
+        <div class="contenedor">
+            <h1>Formulario de Encuesta</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="contenedor">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca.html"> Acerca de...</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="contenedor contenido-principal">
+        
+        <main class="formulario-seccion">
+            <h2>✍️ ¡Queremos tu opinión!</h2>
+
+            <form action="#" method="POST">
+                
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@dominio.com" required>
+
+                <div class="grupo-opciones">
+                    <label>¿Cómo calificas la revista?</label>
+                    <div>
+                        <input type="radio" id="excelente" name="calificacion" value="Excelente" required>
+                        <label for="excelente">Excelente</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="buena" name="calificacion" value="Buena">
+                        <label for="buena">Buena</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="regular" name="calificacion" value="Regular">
+                        <label for="regular">Regular</label>
+                    </div>
+                </div>
+
+                <label for="interes">Área de mayor interés:</label>
+                <select id="interes" name="interes" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="anatomia">Anatomia</option>
+                    <option value="pintura">Pintura</option>
+                    <option value="anime">Anime</option>
+                    <option value="dibujo">Dibujo</option>
+                    <option value="todas las anteriores">Todas las anteriores</option>
+                </select>
+
+                <div class="grupo-opciones">
+                    <label>Temas que te gustaría ver:</label>
+                    <div>
+                        <input type="checkbox" id="arte basico" name="temas[]" value="arte basico">
+                        <label for="arte basico">Arte basico</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="arte medio" name="temas[]" value="arte medio">
+                        <label for="arte medio">Arte medio</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="arte avanzado" name="temas[]" value="arte avanzado">
+                        <label for="arte avanzado">Arte avanzado</label>
+                    </div>
+                </div>
+
+                <button type="submit">Enviar Encuesta</button>
+
+            </form>
+        </main>
+        
+        <aside>
+            <h2>Importante</h2>
+            <p>Tu participación nos ayuda a mejorar el contenido del Curso De Arte 
+                para la comunidad estudiantil y docente.</p>
+        </aside>
+
+    </div>
+
+    <footer>
+        <div class="contenedor">
+            <p>CBTis 142 &copy; 2025 |Curso De Arte</p>
+        </div>
+    </footer>
+
+</body>
+</html>
